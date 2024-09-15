@@ -19,11 +19,16 @@ public class App
 
         StudentDao studentDao = applicationContext.getBean("studentDao",StudentDao.class);
 
-        Student student = new Student(105,"Yash Saxena","Bangalore");
+        Student student = new Student(105,"Yash Saxena","Kolkata");
 
-        int result = studentDao.insert(student);
+        //int result = studentDao.insert(student);
 
-        System.out.println("Student Added : " + result);
+        //System.out.println("Student Added : " + result);
+
+        int result = studentDao.change(student);
+
+        System.out.println("Student Updated : " + result);
+
     }
 
     public void withQuery(ApplicationContext applicationContext){
