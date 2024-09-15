@@ -25,9 +25,13 @@ public class App
 
         //System.out.println("Student Added : " + result);
 
-        int result = studentDao.change(student);
+//        int result = studentDao.change(student);
+//
+//        System.out.println("Student Updated : " + result);
 
-        System.out.println("Student Updated : " + result);
+        int result = studentDao.delete(student.getId());
+
+        System.out.println("Student Deleted : " + result);
 
     }
 
