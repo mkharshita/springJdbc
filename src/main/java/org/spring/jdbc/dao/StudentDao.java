@@ -1,0 +1,7 @@
+package org.spring.jdbc.dao;
+
+import org.spring.jdbc.entities.Student;
+
+public interface StudentDao {
+    int insert(Student student);
+}
