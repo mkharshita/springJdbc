@@ -1,9 +1,7 @@
-package org.spring.jdbcAnnotation;
+package org.spring.jdbcAutowiring;
 
 import org.spring.jdbcAutowiring.dao.StudentDao;
 import org.spring.jdbcAutowiring.entities.Student;
-import org.spring.jdbcAutowiring.dao.StudentDaoImpl;
-import org.spring.jdbcAutowiring.jdbcConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -21,7 +19,7 @@ public class App
         System.out.println( "My Program Started......." );
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(jdbcConfig.class);
 
-        StudentDao studentDao = applicationContext.getBean("studentDao", StudentDaoImpl.class);
+        StudentDao studentDao = applicationContext.getBean("studentDao", StudentDao.class);
 
         Student student = new Student(105,"Yash Saxena","Kolkata");
 
